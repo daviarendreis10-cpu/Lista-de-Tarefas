@@ -2,6 +2,9 @@ const adicionar = document.getElementById('adicionar');
 const tarefa = document.getElementsByTagName('input')[0];
 const lista = document.getElementById('lista');
 const contador = document.getElementById('contador');
+const limpar = document.getElementById('limpar');
+
+limpar.addEventListener('click', limparLista);
 
 adicionar.addEventListener('click', juntar);
 
@@ -62,7 +65,12 @@ function criarBotaoConcluida(li) {
     return concluir;
 }
 
-
+function limparLista() {
+    while (lista.firstChild) {
+        lista.removeChild(lista.firstChild);
+    }
+    atualizarContador();
+}
 
 function juntar(li, concluir) {
     li = criarLi();

@@ -46,6 +46,10 @@ button {
     cursor: pointer;
     border-radius: 8px;
 }
+#limpar {
+    background-color: #ff4c4c4f;
+    margin-top: 20px;
+}
 #adicionar {
     padding: 10px 18px;
     font-size: 16px;
