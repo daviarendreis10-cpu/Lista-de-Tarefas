@@ -9,22 +9,26 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
+
 p {
     font-family: "Inter", sans-serif;
     text-align: center;
     margin-bottom: 20px;
     opacity: 0.8;
 }
+
 main {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 40px;
     border-radius: 12px;
 }
+
 input {
     padding: 10px;
     font-size: 16px;
@@ -33,6 +37,7 @@ input {
     margin-right: 10px;
     background-color: #222e5493;
 }
+
 button {
     background-color: #fcfcfc1c;
     border: none;
@@ -46,10 +51,12 @@ button {
     cursor: pointer;
     border-radius: 8px;
 }
+
 #limpar {
     background-color: #ff4c4c4f;
     margin-top: 20px;
 }
+
 #adicionar {
     padding: 10px 18px;
     font-size: 16px;
@@ -61,6 +68,21 @@ button {
     font-weight: 500;
     transition: 0.2s ease;
 }
+
 button:hover {
     transform: scale(1.05);
+}
+
+#botoes {
+    background-color: #ffffff0e;
+    color: white;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 8px;
 }
