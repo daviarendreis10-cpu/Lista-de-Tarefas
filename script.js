@@ -1,5 +1,6 @@
 const adicionar = document.getElementById('adicionar');
 const tarefa = document.getElementsByTagName('input')[0];
+const hora = document.getElementById('hora');
 const lista = document.getElementById('lista');
 const contador = document.getElementById('contador');
 const limpar = document.getElementById('limpar');
@@ -7,6 +8,8 @@ const concluidas = document.getElementById('concluidas');
 const pendentes = document.getElementById('pendentes');
 const todas = document.getElementById('todas');
 const classConcluida = document.getElementsByClassName('concluida');
+
+
 
 function salvarTarefas() {
     const tarefas = [];
@@ -42,7 +45,16 @@ function verificarInput() {
     }
 };
 
+function verificarHora() {
+    if (hora.value.trim() !== "") {
+        return true;
+    }
+    return false;
+}
+
+
 tarefa.addEventListener('input', verificarInput);
+hora.addEventListener('input', verificarHora);
 
 function criarLi() {
     if (tarefa.value.trim() === "") return;
@@ -51,6 +63,10 @@ function criarLi() {
 
     const span = document.createElement('span');
     span.textContent = tarefa.value;
+
+    if (verificarHora()) {
+        span.textContent += ` - ${hora.value}`;
+    }
 
     const concluir = criarBotaoConcluida(li);
 
